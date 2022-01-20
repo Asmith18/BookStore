@@ -8,11 +8,21 @@
 import UIKit
 
 class BookDetailViewController: UIViewController {
-
+    
+//MARK: - Outlets
+    @IBOutlet weak var enterBookTitleTextField: UITextField!
+    @IBOutlet weak var enterAuthorTextField: UITextField!
+    @IBOutlet weak var enterRatingTextField: UITextField!
+    @IBOutlet weak var enterDescriptionTextField: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+//MARK: - Actions
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    @IBAction func clearButtonPressed(_ sender: UIButton) {
     }
     
 

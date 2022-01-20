@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -90,20 +91,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn8-4n-cco">
-                                <rect key="frame" x="186" y="108" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about this book..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn8-4n-cco">
+                                <rect key="frame" x="8" y="96" width="398" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DMu-dM-ODU">
+                                <rect key="frame" x="157" y="147.5" width="100" height="97.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TWY-i4-j1J"/>
+                                    <constraint firstAttribute="width" secondItem="DMu-dM-ODU" secondAttribute="height" multiplier="1:1" id="W7u-iE-zK5"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bOs-n3-B0W">
+                                <rect key="frame" x="10" y="256" width="394" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZD-13-zZp">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bfn-ck-eMe">
+                                        <rect key="frame" x="0.0" y="42" width="394" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Author..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1t-Vx-ao8">
+                                                <rect key="frame" x="0.0" y="0.0" width="266.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rating..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82M-iw-ft5">
+                                                <rect key="frame" x="274.5" y="0.0" width="119.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Book Description..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-7m-hxm">
+                                <rect key="frame" x="10" y="336" width="394" height="464"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-Og-b0z">
+                                <rect key="frame" x="10" y="808" width="394" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IXi-tW-C0W"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cleat">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="Vfd-FL-TzK" eventType="touchUpInside" id="ipE-Cm-Cot"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4nb-9i-Anc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LEk-Og-b0z" firstAttribute="top" secondItem="cMN-7m-hxm" secondAttribute="bottom" constant="8" id="1qy-s6-V2K"/>
+                            <constraint firstItem="DMu-dM-ODU" firstAttribute="centerX" secondItem="39h-an-QuL" secondAttribute="centerX" id="4mX-Ka-YWc"/>
                             <constraint firstItem="Fn8-4n-cco" firstAttribute="centerX" secondItem="39h-an-QuL" secondAttribute="centerX" id="DID-HD-VNB"/>
+                            <constraint firstItem="Fn8-4n-cco" firstAttribute="top" secondItem="4nb-9i-Anc" secondAttribute="top" constant="8" id="HcX-vV-ubx"/>
+                            <constraint firstItem="DMu-dM-ODU" firstAttribute="top" secondItem="Fn8-4n-cco" secondAttribute="bottom" constant="20" id="JVm-v0-i26"/>
+                            <constraint firstItem="4nb-9i-Anc" firstAttribute="trailing" secondItem="bOs-n3-B0W" secondAttribute="trailing" constant="10" id="JkP-BL-scG"/>
+                            <constraint firstItem="Fn8-4n-cco" firstAttribute="leading" secondItem="4nb-9i-Anc" secondAttribute="leading" constant="8" id="KRM-jL-E24"/>
+                            <constraint firstItem="cMN-7m-hxm" firstAttribute="top" secondItem="bOs-n3-B0W" secondAttribute="bottom" constant="4" id="X58-d7-Inp"/>
+                            <constraint firstItem="4nb-9i-Anc" firstAttribute="trailing" secondItem="Fn8-4n-cco" secondAttribute="trailing" constant="8" id="ZOR-dC-HTu"/>
+                            <constraint firstItem="bOs-n3-B0W" firstAttribute="leading" secondItem="4nb-9i-Anc" secondAttribute="leading" constant="10" id="daE-jh-iTZ"/>
+                            <constraint firstItem="bOs-n3-B0W" firstAttribute="top" secondItem="DMu-dM-ODU" secondAttribute="bottom" constant="10" id="dqe-1N-87H"/>
+                            <constraint firstItem="4nb-9i-Anc" firstAttribute="bottom" secondItem="LEk-Og-b0z" secondAttribute="bottom" constant="10" id="eNf-Jn-SbO"/>
+                            <constraint firstItem="cMN-7m-hxm" firstAttribute="leading" secondItem="4nb-9i-Anc" secondAttribute="leading" constant="10" id="jAB-yq-iqE"/>
+                            <constraint firstItem="4nb-9i-Anc" firstAttribute="trailing" secondItem="LEk-Og-b0z" secondAttribute="trailing" constant="10" id="sTI-88-pRb"/>
+                            <constraint firstItem="LEk-Og-b0z" firstAttribute="leading" secondItem="4nb-9i-Anc" secondAttribute="leading" constant="10" id="xwU-5R-9Bx"/>
+                            <constraint firstItem="4nb-9i-Anc" firstAttribute="trailing" secondItem="cMN-7m-hxm" secondAttribute="trailing" constant="10" id="z2e-Yt-soW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="62G-Me-8Ra"/>
+                    <navigationItem key="navigationItem" id="62G-Me-8Ra">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Orf-qc-L9f">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Vfd-FL-TzK" id="2pz-Pe-Q3e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="enterAuthorTextField" destination="M1t-Vx-ao8" id="p92-Jb-bQM"/>
+                        <outlet property="enterBookTitleTextField" destination="TZD-13-zZp" id="740-N0-9jX"/>
+                        <outlet property="enterDescriptionTextField" destination="cMN-7m-hxm" id="Bdl-Ty-oav"/>
+                        <outlet property="enterRatingTextField" destination="82M-iw-ft5" id="fiU-HN-Dep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prO-NJ-Ton" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,8 +213,15 @@
         <segue reference="sHn-9N-ddU"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
