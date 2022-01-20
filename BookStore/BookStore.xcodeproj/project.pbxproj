@@ -41,6 +41,7 @@
 			);
 			path = Controller;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		416F0D422798D781002D4080 /* Custom Views */ = {
 			isa = PBXGroup;
@@ -88,8 +89,8 @@
 		419B177E27987EBC00423A18 /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
-				419B17AA2798D66600423A18 /* View */,
 				419B17A92798D65100423A18 /* Model */,
+				419B17AA2798D66600423A18 /* View */,
 				416F0D412798D773002D4080 /* Controller */,
 				416F0D442798D7CB002D4080 /* Storyboards */,
 				416F0D432798D797002D4080 /* Supporting Files */,
