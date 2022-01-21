@@ -18,33 +18,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" rowHeight="81" id="0iA-4R-NsB" customClass="LibraryTableViewCell" customModule="BookStore" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="81"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" rowHeight="91" id="0iA-4R-NsB" customClass="LibraryTableViewCell" customModule="BookStore" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0iA-4R-NsB" id="fuD-LT-uJc" customClass="LibraryTableViewCell" customModule="BookStore" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0iA-4R-NsB" id="fuD-LT-uJc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mhw-tn-16V">
-                                            <rect key="frame" x="10" y="8" width="399" height="65"/>
+                                            <rect key="frame" x="10" y="8" width="394" height="75"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT0-cd-AGK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="399" height="44.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="54.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="290" translatesAutoresizingMaskIntoConstraints="NO" id="u0i-QM-qi3">
-                                                    <rect key="frame" x="0.0" y="44.5" width="399" height="20.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="215" translatesAutoresizingMaskIntoConstraints="NO" id="u0i-QM-qi3">
+                                                    <rect key="frame" x="0.0" y="54.5" width="394" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Author" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCB-lv-ikW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hv-Nu-7t6">
-                                                            <rect key="frame" x="350" y="0.0" width="49" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hv-Nu-7t6">
+                                                            <rect key="frame" x="345" y="0.0" width="49" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                                     <constraints>
                                         <constraint firstItem="mhw-tn-16V" firstAttribute="top" secondItem="fuD-LT-uJc" secondAttribute="top" constant="8" id="8cg-YH-xpD"/>
                                         <constraint firstAttribute="bottom" secondItem="mhw-tn-16V" secondAttribute="bottom" constant="8" id="9mM-9Y-59E"/>
-                                        <constraint firstAttribute="trailing" secondItem="mhw-tn-16V" secondAttribute="trailing" constant="5" id="QlJ-3e-T0b"/>
+                                        <constraint firstAttribute="trailing" secondItem="mhw-tn-16V" secondAttribute="trailing" constant="10" id="QlJ-3e-T0b"/>
                                         <constraint firstItem="mhw-tn-16V" firstAttribute="leading" secondItem="fuD-LT-uJc" secondAttribute="leading" constant="10" id="boN-9y-M7g"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -213,7 +213,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sHn-9N-ddU"/>
+        <segue reference="R8e-X5-lxZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>

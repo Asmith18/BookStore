@@ -15,25 +15,50 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var enterRatingTextField: UITextField!
     @IBOutlet weak var enterDescriptionTextField: UITextView!
     
+    //MARK: - Properties
+    
+    var book: Book?
+    
+    //MARK: - cycle of life
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews(book: book)
     }
 
 //MARK: - Actions
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+       guard let title = enterBookTitleTextField.text,
+        let author = enterAuthorTextField.text,
+        let stringRating = enterRatingTextField.text,
+        let description = enterDescriptionTextField.text,
+             let rating = Double(stringRating) else {return}
+        // now that i have the data i can create the book obj
+        if let book = book {
+            BookController.sharedInstance.updateBook(bookToUpdate: book, updatedAuthor: author, updatedTitle: title, updatedRating: rating, updatedSynopsis: description)
+        } else {
+            BookController.sharedInstance.createBook(author: author, title: title, rating: rating, synopsis: description)
+        }
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func clearButtonPressed(_ sender: UIButton) {
+        resetView()
+    }
+//MARK: - Function that Help
+    
+    func updateViews(book: Book?) {
+        guard let book = book else {return}
+        enterRatingTextField.text = String(book.rating)
+        enterAuthorTextField.text = book.author
+        enterBookTitleTextField.text = book.title
+        enterDescriptionTextField.text = book.synopsis
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func resetView() {
+        enterRatingTextField.text = ""
+        enterAuthorTextField.text = ""
+        enterBookTitleTextField.text = ""
+        enterDescriptionTextField.text = ""
     }
-    */
-
 }

@@ -11,12 +11,11 @@ class BookListTableviewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -30,8 +29,9 @@ class BookListTableviewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath) as? LibraryTableViewCell else { return UITableViewCell() }
         let book = BookController.sharedInstance.books[indexPath.row]
-        
+        cell.updateViews(book: book)
         // Configure the cell...
+
 
         return cell
     }
@@ -41,10 +41,11 @@ class BookListTableviewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            let byeByeBook = BookController.sharedInstance.books[indexPath.row]
+            BookController.sharedInstance.deleteBook(bookToDelete: byeByeBook)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            
+        }
     }
 
 
@@ -52,7 +53,17 @@ class BookListTableviewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        //does the identifyer match the segue we are going to
+        if segue.identifier == "toDetailVC" {
+            // asssigning, and type casting the constant destination to the type Bookdeatilviewcontroller
+            if let destination = segue.destination as? BookDetailViewController,
+               // assigning "indexpath" to the index path the user selected
+               let indexPath = tableView.indexPathForSelectedRow {
+                // assigning "Booktopass" to a specific book from the source of truth
+                let bookToPass = BookController.sharedInstance.books[indexPath.row]
+                // assigns the book to the book on our destination
+                destination.book = bookToPass
+            }
+        }
     }
 }
