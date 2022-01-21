@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="81" id="0iA-4R-NsB" customClass="LibraryTableViewCell" customModule="BookStore" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" rowHeight="81" id="0iA-4R-NsB" customClass="LibraryTableViewCell" customModule="BookStore" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0iA-4R-NsB" id="fuD-LT-uJc" customClass="LibraryTableViewCell" customModule="BookStore" customModuleProvider="target">
@@ -62,7 +62,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Vfd-FL-TzK" kind="show" id="sHn-9N-ddU"/>
+                                    <outlet property="bookAuthorLabel" destination="lCB-lv-ikW" id="nRp-JN-XU9"/>
+                                    <outlet property="bookRatingLabel" destination="0Hv-Nu-7t6" id="ACv-lX-y0z"/>
+                                    <outlet property="bookTitleLabel" destination="CT0-cd-AGK" id="INZ-SA-Bjn"/>
+                                    <segue destination="Vfd-FL-TzK" kind="show" identifier="toDetailVC" id="sHn-9N-ddU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -8,16 +8,15 @@
 import UIKit
 
 class LibraryTableViewCell: UITableViewCell {
+//MARK: - Outlets
+    
+    @IBOutlet weak var bookTitleLabel: UILabel!
+    @IBOutlet weak var bookAuthorLabel: UILabel!
+    @IBOutlet weak var bookRatingLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func updateViews(book: Book) {
+        bookTitleLabel.text = book.title
+        bookAuthorLabel.text = book.author
+        bookRatingLabel.text = String(book.rating)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
