@@ -15,6 +15,8 @@
 		C281CE20279A13C400A9EEE0 /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281CE1F279A13C400A9EEE0 /* BookListTableViewController.swift */; };
 		C281CE22279A154800A9EEE0 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281CE21279A154800A9EEE0 /* BookDetailViewController.swift */; };
 		C281CE25279A1A1800A9EEE0 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281CE24279A1A1800A9EEE0 /* LibraryTableViewCell.swift */; };
+		C281CE27279A2DF100A9EEE0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281CE26279A2DF100A9EEE0 /* Book.swift */; };
+		C281CE29279A30B800A9EEE0 /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281CE28279A30B800A9EEE0 /* BookController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C281CE1F279A13C400A9EEE0 /* BookListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
 		C281CE21279A154800A9EEE0 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		C281CE24279A1A1800A9EEE0 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		C281CE26279A2DF100A9EEE0 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		C281CE28279A30B800A9EEE0 /* BookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +48,7 @@
 		416F0D412798D773002D4080 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C281CE1F279A13C400A9EEE0 /* BookListTableViewController.swift */,
-				C281CE21279A154800A9EEE0 /* BookDetailViewController.swift */,
+				C281CE28279A30B800A9EEE0 /* BookController.swift */,
 				C281CE23279A197500A9EEE0 /* Custom Cells */,
 			);
 			path = Controller;
@@ -55,6 +58,7 @@
 		416F0D422798D781002D4080 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				C281CE24279A1A1800A9EEE0 /* LibraryTableViewCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -99,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				419B17A92798D65100423A18 /* Model */,
-				419B17AA2798D66600423A18 /* View */,
+				419B17AA2798D66600423A18 /* View controllers */,
 				416F0D412798D773002D4080 /* Controller */,
 				416F0D442798D7CB002D4080 /* Storyboards */,
 				416F0D432798D797002D4080 /* Resources */,
@@ -110,22 +114,24 @@
 		419B17A92798D65100423A18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C281CE26279A2DF100A9EEE0 /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		419B17AA2798D66600423A18 /* View */ = {
+		419B17AA2798D66600423A18 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C281CE1F279A13C400A9EEE0 /* BookListTableViewController.swift */,
+				C281CE21279A154800A9EEE0 /* BookDetailViewController.swift */,
 				416F0D422798D781002D4080 /* Custom Views */,
 			);
-			path = View;
+			path = "View controllers";
 			sourceTree = "<group>";
 		};
 		C281CE23279A197500A9EEE0 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C281CE24279A1A1800A9EEE0 /* LibraryTableViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -203,9 +209,11 @@
 			files = (
 				419B178027987EBC00423A18 /* AppDelegate.swift in Sources */,
 				C281CE20279A13C400A9EEE0 /* BookListTableViewController.swift in Sources */,
+				C281CE27279A2DF100A9EEE0 /* Book.swift in Sources */,
 				C281CE25279A1A1800A9EEE0 /* LibraryTableViewCell.swift in Sources */,
 				C281CE22279A154800A9EEE0 /* BookDetailViewController.swift in Sources */,
 				419B178227987EBC00423A18 /* SceneDelegate.swift in Sources */,
+				C281CE29279A30B800A9EEE0 /* BookController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
